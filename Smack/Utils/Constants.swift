@@ -7,8 +7,14 @@
 //
 
 import Foundation
+typealias CompletionHandler = (_Success: Bool) -> ()
+
+//sugue
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
 let TO_UNWIND_CAHNNEL = "unwindtoChannel"
 
-
+//login credential
+let TOKEN_KEY = "token"
+let LOGGED_IN_KEY = "loggedIn"
+let USER_EMAIL = "userEmail"

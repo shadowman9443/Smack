@@ -13,6 +13,7 @@
 		DC5745B120E14BEB007C59E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5745B020E14BEB007C59E7 /* Assets.xcassets */; };
 		DC5745B420E14BEB007C59E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5745B220E14BEB007C59E7 /* LaunchScreen.storyboard */; };
 		DC57DE8920E921E6000DEB2E /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57DE8820E921E6000DEB2E /* CreateAccountVC.swift */; };
+		DC57DE8C20E9AABE000DEB2E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57DE8B20E9AABE000DEB2E /* AuthService.swift */; };
 		DCA7727A20E30ED900C4738E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA7727920E30ED900C4738E /* SWRevealViewController.m */; };
 		DCA7728020E3119300C4738E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7727F20E3119300C4738E /* ChatVC.swift */; };
 		DCA7728220E311B200C4738E /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7728120E311B200C4738E /* ChannelVC.swift */; };
@@ -32,6 +33,7 @@
 		DC5745B320E14BEB007C59E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC5745B520E14BEB007C59E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC57DE8820E921E6000DEB2E /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		DC57DE8B20E9AABE000DEB2E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DCA7727820E30ED900C4738E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Tutorials/[FreeTutorials.Us] Udemy - devslopes-ios11/06 Networking_ APIs_ REST_ and Building a Slack Clone/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
 		DCA7727920E30ED900C4738E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Tutorials/[FreeTutorials.Us] Udemy - devslopes-ios11/06 Networking_ APIs_ REST_ and Building a Slack Clone/Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		DCA7727B20E30F9200C4738E /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		DC5745A820E14BE9007C59E7 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				DC57DE8A20E9AA95000DEB2E /* Services */,
 				DCA7728720E5D8B300C4738E /* Utils */,
 				DCA7727E20E310AC00C4738E /* Model */,
 				DCA7727D20E310A200C4738E /* View */,
@@ -114,6 +117,14 @@
 				DC5745B520E14BEB007C59E7 /* Info.plist */,
 			);
 			path = Smack;
+			sourceTree = "<group>";
+		};
+		DC57DE8A20E9AA95000DEB2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC57DE8B20E9AABE000DEB2E /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		DCA7727C20E3109200C4738E /* Controller */ = {
@@ -272,6 +283,7 @@
 				DCA7728220E311B200C4738E /* ChannelVC.swift in Sources */,
 				DCA7728020E3119300C4738E /* ChatVC.swift in Sources */,
 				DC57DE8920E921E6000DEB2E /* CreateAccountVC.swift in Sources */,
+				DC57DE8C20E9AABE000DEB2E /* AuthService.swift in Sources */,
 				DCA7728B20E5D92300C4738E /* LoginVC.swift in Sources */,
 				DCA7728420E5BBF100C4738E /* GradientView.swift in Sources */,
 				DC5745AA20E14BE9007C59E7 /* AppDelegate.swift in Sources */,
