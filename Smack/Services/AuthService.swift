@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class AuthService{
     static let instance = AuthService()
@@ -49,16 +50,53 @@ class AuthService{
             "email": loawerCaseEmail,
             "password":password
         ]
-        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
             if response.result.error == nil {
                 completion(true)
             }else{
                 completion(false)
-                debugPrint(response.result.error)
+                debugPrint(response.result.error as Any)
             }
         }
     }
     
+    func loginUser(email: String, password: String , completion: @escaping CompletionHandler){
+        let loawerCaseEmail = email.lowercased()
+        
+       
+        let body : [String: Any] = [
+            "email": loawerCaseEmail,
+            "password":password
+        ]
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
+            if response.result.error == nil {
+//                if let json = response.result.value as? Dictionary<String , Any>{
+//                    if let email = json["user"] as? String {
+//                        self.userEmail = email
+//                    }
+//                    if let token = json["token"] as? String {
+//                        self.authToke = token
+//                    }
+//                }
+                guard let data = response.data else { return }
+                do {
+                    let json = try JSON(data: data)
+                    
+                    self.userEmail = json["user"].string!
+                    self.authToke = json["token"].string!
+                } catch {
+                     print(error)
+                }
+                
+                self.isLoggedIn = true
+               
+                completion(true)
+            }else{
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
     
     
     
