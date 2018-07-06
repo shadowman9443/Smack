@@ -25,10 +25,16 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if UserService.instance.avatarName != "" {
+            userImage.image = UIImage(named: UserService.instance.avatarName)
+            avatarName = UserService.instance.avatarName
+        }
+    }
     @IBAction func exitCreateAcountBtnPresed(_ sender: Any) {
           performSegue(withIdentifier: TO_UNWIND_CAHNNEL, sender: nil)
     }
