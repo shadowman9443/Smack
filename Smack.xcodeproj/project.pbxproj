@@ -11,6 +11,7 @@
 		DC0595C920ED9CC200C5C2BD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595C820ED9CC200C5C2BD /* UserService.swift */; };
 		DC0595CB20EEF66400C5C2BD /* AvaaterPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595CA20EEF66400C5C2BD /* AvaaterPickerVC.swift */; };
 		DC0595CD20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */; };
+		DC0595CF20EF332E00C5C2BD /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595CE20EF332E00C5C2BD /* CircleImageView.swift */; };
 		DC068A5720ED1658000CBE70 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC068A5620ED1658000CBE70 /* RoundedButton.swift */; };
 		DC5745AA20E14BE9007C59E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5745A920E14BE9007C59E7 /* AppDelegate.swift */; };
 		DC5745AF20E14BE9007C59E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5745AD20E14BE9007C59E7 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		DC0595C820ED9CC200C5C2BD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DC0595CA20EEF66400C5C2BD /* AvaaterPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaaterPickerVC.swift; sourceTree = "<group>"; };
 		DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaterCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC0595CE20EF332E00C5C2BD /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		DC068A5620ED1658000CBE70 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		DC5745A620E14BE9007C59E7 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5745A920E14BE9007C59E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				DCA7728320E5BBF100C4738E /* GradientView.swift */,
 				DC068A5620ED1658000CBE70 /* RoundedButton.swift */,
 				DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */,
+				DC0595CE20EF332E00C5C2BD /* CircleImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				DCA7728220E311B200C4738E /* ChannelVC.swift in Sources */,
 				DC068A5720ED1658000CBE70 /* RoundedButton.swift in Sources */,
+				DC0595CF20EF332E00C5C2BD /* CircleImageView.swift in Sources */,
 				DCA7728020E3119300C4738E /* ChatVC.swift in Sources */,
 				DC57DE8920E921E6000DEB2E /* CreateAccountVC.swift in Sources */,
 				DC57DE8C20E9AABE000DEB2E /* AuthService.swift in Sources */,

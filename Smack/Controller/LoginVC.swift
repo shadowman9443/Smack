@@ -11,12 +11,11 @@ import UIKit
 class LoginVC: UIViewController {
 
     @IBOutlet weak var usernameTxt: UITextField!
-    
-    
     @IBOutlet weak var passwordTxt: UITextField!
+     @IBOutlet weak var spinner: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
     }
 
@@ -29,17 +28,32 @@ class LoginVC: UIViewController {
     }
     
     
+   
     
     @IBAction func loginbtnPressed(_ sender: Any) {
+        spinner.isHidden = false
+        spinner.startAnimating()
         guard let email = usernameTxt.text , usernameTxt.text != "" else {return}
         guard let pass = passwordTxt.text , passwordTxt.text != "" else {return}
         
         AuthService.instance.loginUser(email: email, password: pass) { (success) in
             if success{
                 print("login success")
+                self.spinner.isHidden = true
+                self.spinner.stopAnimating()
             }
         }
     }
+    func setupView()  {
+        spinner.isHidden = true
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPuprlePlaceHolder ])
+        
+        passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPuprlePlaceHolder ])
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
+        view.addGestureRecognizer(tap)
+    }
     
-    
+    @objc func handleTap(){
+        view.endEditing(true)
+    }
 }
