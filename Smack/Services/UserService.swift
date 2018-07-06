@@ -29,4 +29,33 @@ class UserService {
         self.avatarName = avatarName
     }
     
+    func  returnColor(components: String) -> UIColor {
+        let scanner = Scanner(string: components)
+        let skipped = CharacterSet(charactersIn: "[],")
+        let comma = CharacterSet(charactersIn: ",")
+        
+        scanner.charactersToBeSkipped = skipped
+        
+        var r, g, b ,a : NSString?
+        
+        scanner.scanUpToCharacters(from: comma, into: &r)
+        scanner.scanUpToCharacters(from: comma, into: &g)
+        scanner.scanUpToCharacters(from: comma, into: &b)
+        scanner.scanUpToCharacters(from: comma, into: &a)
+        let deafaultColor = UIColor.lightGray
+        
+        guard r != nil else { return deafaultColor }
+        guard g != nil else { return deafaultColor }
+        guard b != nil else { return deafaultColor }
+        guard a != nil else { return deafaultColor }
+        
+        let rFloat = CGFloat((r?.doubleValue)!)
+        let gFloat = CGFloat((g?.doubleValue)!)
+        let bFloat = CGFloat((b?.doubleValue)!)
+        let aFloat = CGFloat((a?.doubleValue)!)
+        
+        let newUIColor = UIColor(displayP3Red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        return newUIColor
+    }
+    
 }
