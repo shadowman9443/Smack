@@ -12,13 +12,18 @@
 		DC0595CB20EEF66400C5C2BD /* AvaaterPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595CA20EEF66400C5C2BD /* AvaaterPickerVC.swift */; };
 		DC0595CD20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */; };
 		DC0595CF20EF332E00C5C2BD /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595CE20EF332E00C5C2BD /* CircleImageView.swift */; };
+		DC0595D220F11DF000C5C2BD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0595D020F11DF000C5C2BD /* ProfileVC.swift */; };
+		DC0595D320F11DF000C5C2BD /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0595D120F11DF000C5C2BD /* ProfileVC.xib */; };
 		DC068A5720ED1658000CBE70 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC068A5620ED1658000CBE70 /* RoundedButton.swift */; };
+		DC211C2620FEC753002AA9EA /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC211C2520FEC753002AA9EA /* ChannelCell.swift */; };
 		DC5745AA20E14BE9007C59E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5745A920E14BE9007C59E7 /* AppDelegate.swift */; };
 		DC5745AF20E14BE9007C59E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5745AD20E14BE9007C59E7 /* Main.storyboard */; };
 		DC5745B120E14BEB007C59E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5745B020E14BEB007C59E7 /* Assets.xcassets */; };
 		DC5745B420E14BEB007C59E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5745B220E14BEB007C59E7 /* LaunchScreen.storyboard */; };
 		DC57DE8920E921E6000DEB2E /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57DE8820E921E6000DEB2E /* CreateAccountVC.swift */; };
 		DC57DE8C20E9AABE000DEB2E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57DE8B20E9AABE000DEB2E /* AuthService.swift */; };
+		DC958FF820F6DFE500019841 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC958FF720F6DFE500019841 /* MessageService.swift */; };
+		DC958FFA20F6E08F00019841 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC958FF920F6E08F00019841 /* Channel.swift */; };
 		DCA7727A20E30ED900C4738E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA7727920E30ED900C4738E /* SWRevealViewController.m */; };
 		DCA7728020E3119300C4738E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7727F20E3119300C4738E /* ChatVC.swift */; };
 		DCA7728220E311B200C4738E /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7728120E311B200C4738E /* ChannelVC.swift */; };
@@ -35,7 +40,10 @@
 		DC0595CA20EEF66400C5C2BD /* AvaaterPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaaterPickerVC.swift; sourceTree = "<group>"; };
 		DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaterCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC0595CE20EF332E00C5C2BD /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		DC0595D020F11DF000C5C2BD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		DC0595D120F11DF000C5C2BD /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		DC068A5620ED1658000CBE70 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		DC211C2520FEC753002AA9EA /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		DC5745A620E14BE9007C59E7 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5745A920E14BE9007C59E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC5745AE20E14BE9007C59E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +52,8 @@
 		DC5745B520E14BEB007C59E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC57DE8820E921E6000DEB2E /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		DC57DE8B20E9AABE000DEB2E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DC958FF720F6DFE500019841 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		DC958FF920F6E08F00019841 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		DCA7727820E30ED900C4738E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Tutorials/[FreeTutorials.Us] Udemy - devslopes-ios11/06 Networking_ APIs_ REST_ and Building a Slack Clone/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
 		DCA7727920E30ED900C4738E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Tutorials/[FreeTutorials.Us] Udemy - devslopes-ios11/06 Networking_ APIs_ REST_ and Building a Slack Clone/Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		DCA7727B20E30F9200C4738E /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -134,6 +144,7 @@
 			children = (
 				DC57DE8B20E9AABE000DEB2E /* AuthService.swift */,
 				DC0595C820ED9CC200C5C2BD /* UserService.swift */,
+				DC958FF720F6DFE500019841 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -146,6 +157,8 @@
 				DCA7728A20E5D92300C4738E /* LoginVC.swift */,
 				DC57DE8820E921E6000DEB2E /* CreateAccountVC.swift */,
 				DC0595CA20EEF66400C5C2BD /* AvaaterPickerVC.swift */,
+				DC0595D020F11DF000C5C2BD /* ProfileVC.swift */,
+				DC0595D120F11DF000C5C2BD /* ProfileVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +170,7 @@
 				DC068A5620ED1658000CBE70 /* RoundedButton.swift */,
 				DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */,
 				DC0595CE20EF332E00C5C2BD /* CircleImageView.swift */,
+				DC211C2520FEC753002AA9EA /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +178,7 @@
 		DCA7727E20E310AC00C4738E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DC958FF920F6E08F00019841 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0595D320F11DF000C5C2BD /* ProfileVC.xib in Resources */,
 				DC5745B420E14BEB007C59E7 /* LaunchScreen.storyboard in Resources */,
 				DC5745B120E14BEB007C59E7 /* Assets.xcassets in Resources */,
 				DC5745AF20E14BE9007C59E7 /* Main.storyboard in Resources */,
@@ -295,10 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0595D220F11DF000C5C2BD /* ProfileVC.swift in Sources */,
+				DC211C2620FEC753002AA9EA /* ChannelCell.swift in Sources */,
 				DCA7728220E311B200C4738E /* ChannelVC.swift in Sources */,
 				DC068A5720ED1658000CBE70 /* RoundedButton.swift in Sources */,
 				DC0595CF20EF332E00C5C2BD /* CircleImageView.swift in Sources */,
+				DC958FFA20F6E08F00019841 /* Channel.swift in Sources */,
 				DCA7728020E3119300C4738E /* ChatVC.swift in Sources */,
+				DC958FF820F6DFE500019841 /* MessageService.swift in Sources */,
 				DC57DE8920E921E6000DEB2E /* CreateAccountVC.swift in Sources */,
 				DC57DE8C20E9AABE000DEB2E /* AuthService.swift in Sources */,
 				DCA7728B20E5D92300C4738E /* LoginVC.swift in Sources */,

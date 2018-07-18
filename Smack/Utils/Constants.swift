@@ -15,6 +15,7 @@ let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_ADD_USER = "\(BASE_URL)user/add"
 let GET_USER_BY_EMAIL = "\(BASE_URL)user/byEmail"
+let URL_GET_CHANNELS =  "\(BASE_URL)channel/"
 
 //color
 
@@ -41,7 +42,7 @@ let HEADER = [
 ]
 
 let BEARER_HEADER = [
-    "Authorization": "Bearer \(AuthService.instance.authToke)",
+    "Authorization":"Bearer \(AuthService.instance.authToke)",
     "Content-Type": "application/json; charset=utf-8"
     
 ]

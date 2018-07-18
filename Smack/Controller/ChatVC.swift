@@ -28,9 +28,14 @@ class ChatVC: UIViewController {
                 if success{
                     NotificationCenter.default.post(Notification.init(name: NOTIF_USER_DATA_DID_CHANGE))
                    
+                   
                 }
             })
         }
+        if AuthService.instance.isLoggedIn {
+            
+        }
+       
     }
 
    
