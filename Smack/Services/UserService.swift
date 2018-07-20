@@ -29,32 +29,33 @@ class UserService {
         self.avatarName = avatarName
     }
     
-    func  returnColor(components: String) -> UIColor {
+    func returnUIColor(components: String) -> UIColor {
         let scanner = Scanner(string: components)
-        let skipped = CharacterSet(charactersIn: "[],")
+        let skipped = CharacterSet(charactersIn: "[], ")
         let comma = CharacterSet(charactersIn: ",")
-        
         scanner.charactersToBeSkipped = skipped
         
-        var r, g, b ,a : NSString?
+        var r, g, b, a : NSString?
         
         scanner.scanUpToCharacters(from: comma, into: &r)
         scanner.scanUpToCharacters(from: comma, into: &g)
         scanner.scanUpToCharacters(from: comma, into: &b)
         scanner.scanUpToCharacters(from: comma, into: &a)
-        let deafaultColor = UIColor.lightGray
         
-        guard r != nil else { return deafaultColor }
-        guard g != nil else { return deafaultColor }
-        guard b != nil else { return deafaultColor }
-        guard a != nil else { return deafaultColor }
+        let defaultColor = UIColor.lightGray
         
-        let rFloat = CGFloat((r?.doubleValue)!)
-        let gFloat = CGFloat((g?.doubleValue)!)
-        let bFloat = CGFloat((b?.doubleValue)!)
-        let aFloat = CGFloat((a?.doubleValue)!)
+        guard let rUnwrapped = r else { return defaultColor }
+        guard let gUnwrapped = g else { return defaultColor }
+        guard let bUnwrapped = b else { return defaultColor }
+        guard let aUnwrapped = a else { return defaultColor }
         
-        let newUIColor = UIColor(displayP3Red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        let rfloat = CGFloat(rUnwrapped.doubleValue)
+        let gfloat = CGFloat(gUnwrapped.doubleValue)
+        let bfloat = CGFloat(bUnwrapped.doubleValue)
+        let afloat = CGFloat(aUnwrapped.doubleValue)
+        
+        let newUIColor = UIColor(red: rfloat, green: gfloat, blue: bfloat, alpha: afloat)
+        
         return newUIColor
     }
     func loggedOutUser(){

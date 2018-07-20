@@ -14,7 +14,7 @@ let BASE_URL = "https://chattychatmontu.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_ADD_USER = "\(BASE_URL)user/add"
-let GET_USER_BY_EMAIL = "\(BASE_URL)user/byEmail"
+let GET_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS =  "\(BASE_URL)channel/"
 
 //color

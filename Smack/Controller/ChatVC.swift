@@ -27,14 +27,14 @@ class ChatVC: UIViewController {
             AuthService.instance.getUserByEmail(completion: { (success) in
                 if success{
                     NotificationCenter.default.post(Notification.init(name: NOTIF_USER_DATA_DID_CHANGE))
-                   
+                    MessageService.instance.findAllChannel { (success) in
+                        
+                    }
                    
                 }
             })
         }
-        if AuthService.instance.isLoggedIn {
-            
-        }
+       
        
     }
 

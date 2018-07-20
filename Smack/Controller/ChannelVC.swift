@@ -41,12 +41,22 @@ class ChannelVC: UIViewController , UITableViewDelegate, UITableViewDataSource{
     @objc func userdataDidchange(_ notif : Notification)  {
        checkLogin()
     }
+    
+    
+    @IBAction func addChannelBtn(_ sender: Any) {
+        let addChannel = CreateChannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
+    }
+    
     func checkLogin() {
         if AuthService.instance.isLoggedIn {
             print("\(UserService.instance.name)")
+            print("\(UserService.instance.avatarName)")
+            print("\(UserService.instance.avatarColor)")
             loginBtn.setTitle(UserService.instance.name, for: .normal)
             profileImage.image = UIImage(named: UserService.instance.avatarName)
-            profileImage.backgroundColor = UserService.instance.returnColor(components: UserService.instance.avatarColor)
+            profileImage.backgroundColor = UserService.instance.returnUIColor(components: UserService.instance.avatarColor)
             MessageService.instance.findAllChannel { (success) in
                 
                 if success{

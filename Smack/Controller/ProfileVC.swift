@@ -35,7 +35,7 @@ class ProfileVC: UIViewController {
         userName.text = UserService.instance.name
         userEmail.text = UserService.instance.email
         profileImage.image = UIImage(named: UserService.instance.avatarName)
-        profileImage.backgroundColor = UserService.instance.returnColor(components: UserService.instance.avatarColor)
+        profileImage.backgroundColor = UserService.instance.returnUIColor(components: UserService.instance.avatarColor)
         
     }
     //button actions
