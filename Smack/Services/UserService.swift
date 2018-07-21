@@ -67,5 +67,6 @@ class UserService {
         AuthService.instance.isLoggedIn = false
         AuthService.instance.userEmail = ""
         AuthService.instance.authToke = ""
+        MessageService.instance.clearChannel()
     }
 }
