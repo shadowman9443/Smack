@@ -19,6 +19,7 @@
 		DC211C2920FF81E5002AA9EA /* CreateChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC211C2720FF81E5002AA9EA /* CreateChannelVC.swift */; };
 		DC211C2A20FF81E5002AA9EA /* CreateChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC211C2820FF81E5002AA9EA /* CreateChannelVC.xib */; };
 		DC211C2C2100E3CF002AA9EA /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC211C2B2100E3CF002AA9EA /* SocketService.swift */; };
+		DC211C2E2104D3F6002AA9EA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC211C2D2104D3F6002AA9EA /* Message.swift */; };
 		DC5745AA20E14BE9007C59E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5745A920E14BE9007C59E7 /* AppDelegate.swift */; };
 		DC5745AF20E14BE9007C59E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5745AD20E14BE9007C59E7 /* Main.storyboard */; };
 		DC5745B120E14BEB007C59E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5745B020E14BEB007C59E7 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		DCA7728420E5BBF100C4738E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7728320E5BBF100C4738E /* GradientView.swift */; };
 		DCA7728920E5D8EE00C4738E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7728820E5D8EE00C4738E /* Constants.swift */; };
 		DCA7728B20E5D92300C4738E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7728A20E5D92300C4738E /* LoginVC.swift */; };
+		DCB5F112210561AA00FC166B /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F111210561A800FC166B /* KeyboardBoundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,7 @@
 		DC211C2720FF81E5002AA9EA /* CreateChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelVC.swift; sourceTree = "<group>"; };
 		DC211C2820FF81E5002AA9EA /* CreateChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateChannelVC.xib; sourceTree = "<group>"; };
 		DC211C2B2100E3CF002AA9EA /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		DC211C2D2104D3F6002AA9EA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DC5745A620E14BE9007C59E7 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5745A920E14BE9007C59E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC5745AE20E14BE9007C59E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		DCA7728320E5BBF100C4738E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DCA7728820E5D8EE00C4738E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DCA7728A20E5D92300C4738E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DCB5F111210561A800FC166B /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		DCA7727D20E310A200C4738E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DCB5F111210561A800FC166B /* KeyboardBoundView.swift */,
 				DCA7728320E5BBF100C4738E /* GradientView.swift */,
 				DC068A5620ED1658000CBE70 /* RoundedButton.swift */,
 				DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */,
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				DC958FF920F6E08F00019841 /* Channel.swift */,
+				DC211C2D2104D3F6002AA9EA /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,12 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB5F112210561AA00FC166B /* KeyboardBoundView.swift in Sources */,
 				DC211C2C2100E3CF002AA9EA /* SocketService.swift in Sources */,
 				DC0595D220F11DF000C5C2BD /* ProfileVC.swift in Sources */,
 				DC211C2620FEC753002AA9EA /* ChannelCell.swift in Sources */,
 				DCA7728220E311B200C4738E /* ChannelVC.swift in Sources */,
 				DC068A5720ED1658000CBE70 /* RoundedButton.swift in Sources */,
 				DC0595CF20EF332E00C5C2BD /* CircleImageView.swift in Sources */,
+				DC211C2E2104D3F6002AA9EA /* Message.swift in Sources */,
 				DC958FFA20F6E08F00019841 /* Channel.swift in Sources */,
 				DCA7728020E3119300C4738E /* ChatVC.swift in Sources */,
 				DC958FF820F6DFE500019841 /* MessageService.swift in Sources */,

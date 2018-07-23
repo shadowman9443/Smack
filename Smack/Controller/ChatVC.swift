@@ -17,9 +17,12 @@ class ChatVC: UIViewController {
     
     @IBOutlet weak var chennelnamlebel: UILabel!
     
+    @IBOutlet weak var msgText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -52,6 +55,12 @@ class ChatVC: UIViewController {
         MessageService.instance.findAllChannel { (success) in
             if success{
                //do stuff with channel
+                if MessageService.instance.channels.count > 0{
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updatewithCahnnel()
+                }else{
+                     self.chennelnamlebel.text = "No channels yet!"
+                }
                 
                 
             }
@@ -60,8 +69,34 @@ class ChatVC: UIViewController {
     func updatewithCahnnel() {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         chennelnamlebel.text = "#\(channelName)"
+        getMessagesFromChannel()
     }
-
-   
-
+    func getMessagesFromChannel() {
+        guard let chId = MessageService.instance.selectedChannel?.id  else {
+            return
+        }
+        
+        MessageService.instance.findAllmessage(channelId: chId) { (success) in
+            
+        }
+    }
+    @objc func handleTap()  {
+        view.endEditing(true)
+    }
+    @IBAction func sendBtnClicked(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            guard let chId = MessageService.instance.selectedChannel?.id  else {
+                return
+            }
+            guard let msg = msgText.text , msgText.text != "" else {return}
+            
+            SocketService.instance.addMessage(messageBody: msg, userId: UserService.instance.id, channelid: chId) { (success) in
+                if success {
+                    self.msgText.text = ""
+                    self.msgText.resignFirstResponder()
+                }
+            }
+        }
+    }
+    
 }
