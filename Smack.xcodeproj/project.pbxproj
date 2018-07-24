@@ -35,6 +35,7 @@
 		DCA7728920E5D8EE00C4738E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7728820E5D8EE00C4738E /* Constants.swift */; };
 		DCA7728B20E5D92300C4738E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7728A20E5D92300C4738E /* LoginVC.swift */; };
 		DCB5F112210561AA00FC166B /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F111210561A800FC166B /* KeyboardBoundView.swift */; };
+		DCB5F1142106ADB400FC166B /* MessageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5F1132106ADB400FC166B /* MessageCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		DCA7728820E5D8EE00C4738E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DCA7728A20E5D92300C4738E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		DCB5F111210561A800FC166B /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		DCB5F1132106ADB400FC166B /* MessageCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				DC0595CC20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift */,
 				DC0595CE20EF332E00C5C2BD /* CircleImageView.swift */,
 				DC211C2520FEC753002AA9EA /* ChannelCell.swift */,
+				DCB5F1132106ADB400FC166B /* MessageCellTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				DCA7728420E5BBF100C4738E /* GradientView.swift in Sources */,
 				DC0595CD20EF1A4C00C5C2BD /* AvaterCellCollectionViewCell.swift in Sources */,
 				DC5745AA20E14BE9007C59E7 /* AppDelegate.swift in Sources */,
+				DCB5F1142106ADB400FC166B /* MessageCellTableViewCell.swift in Sources */,
 				DCA7727A20E30ED900C4738E /* SWRevealViewController.m in Sources */,
 				DCA7728920E5D8EE00C4738E /* Constants.swift in Sources */,
 			);
