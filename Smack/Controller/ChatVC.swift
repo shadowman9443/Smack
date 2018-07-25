@@ -14,6 +14,7 @@ class ChatVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     //OUTLETS
     
+    @IBOutlet weak var typingText: UILabel!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuBtn: UIButton!
@@ -45,6 +46,30 @@ class ChatVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                    
                 }
             })
+        }
+        SocketService.instance.getTypingUser { (typingUsers) in
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            var names = ""
+            var numberofTypers = 0
+            for (typingUser, channel) in typingUsers {
+                if typingUser != UserService.instance.name && channel == channelId {
+                    if names == "" {
+                        names = typingUser
+                    }else {
+                        names = "\(names), \(typingUser)"
+                    }
+                    numberofTypers += 1
+                }
+            }
+            if numberofTypers > 0 && AuthService.instance.isLoggedIn == true {
+                var verb = "is"
+                if numberofTypers > 1 {
+                    verb = "are"
+                }
+                self.typingText.text = "\(names) \(verb) typing message"
+            }else {
+                self.typingText.text = ""
+            }
         }
 //        SocketService.instance.getChatMessage { (success) in
 //            if success {
@@ -153,14 +178,19 @@ class ChatVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func messagTxtEditing(_ sender: Any) {
+        guard let chId = MessageService.instance.selectedChannel?.id  else {
+            return
+        }
         if msgText.text == "" {
             isTyping = false
             sendButton.isHidden = true
+            SocketService.instance.socket.emit("stopType", UserService.instance.name,chId)
         }else {
             if isTyping == false {
                 sendButton.isHidden = true
             }
             isTyping = true
+            SocketService.instance.socket.emit("startType", UserService.instance.name,chId)
         }
     }
 }
