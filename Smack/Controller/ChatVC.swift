@@ -47,6 +47,19 @@ class ChatVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                 }
             })
         }
+        SocketService.instance.getChatMessage { (newMessage) in
+                if newMessage.channelId == MessageService.instance.selectedChannel?.id &&  AuthService.instance.isLoggedIn {
+                    MessageService.instance.messages.append(newMessage)
+                    self.tableView.reloadData()
+                    if MessageService.instance.messages.count > 0 {
+                        let endIndex = IndexPath(row: MessageService.instance.messages.count-1, section: 0)
+                        self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+                    }
+                    
+                }else {
+                    
+                }
+        }
         SocketService.instance.getTypingUser { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
             var names = ""
@@ -144,16 +157,16 @@ class ChatVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                     self.msgText.resignFirstResponder()
                     
                     //
-                    SocketService.instance.getChatMessage { (success) in
-                        if success {
-                            self.tableView.reloadData()
-                            if MessageService.instance.messages.count > 0 {
-                                let endIndex = IndexPath(row: MessageService.instance.messages.count-1, section: 0)
-                                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
-                            }
-                            
-                        }
-                    }
+//                    SocketService.instance.getChatMessage { (success) in
+//                        if success {
+//                            self.tableView.reloadData()
+//                            if MessageService.instance.messages.count > 0 {
+//                                let endIndex = IndexPath(row: MessageService.instance.messages.count-1, section: 0)
+//                                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+//                            }
+//
+//                        }
+//                    }
                   // self.tableView.reloadData()
                 }
             }
@@ -187,10 +200,24 @@ class ChatVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             SocketService.instance.socket.emit("stopType", UserService.instance.name,chId)
         }else {
             if isTyping == false {
-                sendButton.isHidden = true
+                sendButton.isHidden = false
+                SocketService.instance.socket.emit("startType", UserService.instance.name,chId)
             }
             isTyping = true
-            SocketService.instance.socket.emit("startType", UserService.instance.name,chId)
+            
         }
+//        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+//        if messageTxtBox.text == "" {
+//            isTyping = false
+//            sendBtn.isHidden = true
+//            SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
+//        } else {
+//            if isTyping == false {
+//                sendBtn.isHidden = false
+//                SocketService.instance.socket.emit("startType", UserDataService.instance.name, channelId)
+//            }
+//            isTyping = true
+//        }
     }
 }
+
